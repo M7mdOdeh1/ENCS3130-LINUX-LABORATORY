@@ -1,0 +1,278 @@
+Processes: 591 total, 2 running, 589 sleeping, 3012 threads 
+2023/05/21 11:39:38
+Load Avg: 1.53, 1.73, 1.81 
+CPU usage: 3.7% user, 5.42% sys, 91.50% idle 
+SharedLibs: 418M resident, 49M data, 29M linkedit.
+MemRegions: 498149 total, 2972M resident, 146M private, 2127M shared.
+PhysMem: 18G used (3695M wired, 1751M compressor), 14G unused.
+VM: 57T vsize, 3444M framework vsize, 15425755(0) swapins, 17297986(0) swapouts.
+Networks: packets: 3760418/3403M in, 1967584/579M out.
+Disks: 3309941/109G read, 2396436/114G written.
+
+PID    COMMAND          %CPU TIME     #TH #WQ #PORTS MEM   PURG CMPRS PGRP  PPID STATE    BOOSTS %CPU_ME %CPU_OTHRS UID FAULTS COW MSGSENT MSGRECV SYSBSD SYSMACH CSW PAGEINS IDLEW POWER INSTRS CYCLES USER    #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+74339  top              0.0  00:00.85 1/1 0   16     3940K 0B   0B    74339 541  running  *0[1]  0.00000 0.00000    0   2084   118 1045401 522700  2542   527551  62  3       0     0.0   0      0      root    N/A    N/A   N/A   N/A   N/A   N/A  
+74332  com.apple.ColorS 0.0  00:00.01 2   1   24     612K  0B   0B    74332 1    sleeping *0[2]  0.00000 0.00000    501 913    119 116     45      387    230     45  2       0     0.0   0      0      mohamed N/A    N/A   N/A   N/A   N/A   N/A  
+74331  cupsd            0.0  00:00.08 3   1   52     2320K 0B   0B    74331 1    sleeping *0[1]  0.00000 0.00000    0   3880   135 138     48      1394   294     148 3       1     0.0   0      0      root    N/A    N/A   N/A   N/A   N/A   N/A  
+74330  printtool        0.0  00:00.11 3   1   136    3072K 0B   0B    74330 1    sleeping *0[26] 0.00000 0.00000    501 5954   258 713     167     1862   1472    593 22      3     0.0   0      0      mohamed N/A    N/A   N/A   N/A   N/A   N/A  
+74329  mdworker_shared  0.0  00:00.15 4   1   53     1312K 0B   0B    74329 1    sleeping *0[1]  0.00000 0.00000    501 6409   173 707     305     5001   715     171 18      1     0.0   0      0      mohamed N/A    N/A   N/A   N/A   N/A   N/A  
+74323  mdworker_shared  0.0  00:00.08 3   1   51     1368K 0B   0B    74323 1    sleeping *0[1]  0.00000 0.00000    501 4995   171 714     305     1165   731     151 18      0     0.0   0      0      mohamed N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 591 total, 2 running, 589 sleeping, 3039 threads 
+2023/05/21 11:39:40
+Load Avg: 1.53, 1.73, 1.81 
+CPU usage: 2.4% user, 1.55% sys, 96.39% idle 
+SharedLibs: 418M resident, 49M data, 29M linkedit.
+MemRegions: 498149 total, 2972M resident, 146M private, 2127M shared.
+PhysMem: 18G used (3695M wired, 1751M compressor), 14G unused.
+VM: 57T vsize, 3444M framework vsize, 15425755(0) swapins, 17297986(0) swapouts.
+Networks: packets: 3760420/3403M in, 1967586/579M out.
+Disks: 3309942/109G read, 2396447/114G written.
+
+PID    COMMAND          %CPU TIME     #TH    #WQ #PORTS MEM    PURG  CMPRS PGRP  PPID STATE    BOOSTS   %CPU_ME %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD    SYSMACH   CSW        PAGEINS IDLEW     POWER INSTRS    CYCLES     USER          #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+593    Google Chrome He 14.4 07:56.89 29     1   403    235M-  3800K 50M   416   416  sleeping *1[5]    0.05394 0.00000    501 2807053+  3072   6402855+  2870935+  2920826+  8378226+  2280700+   9753    96568+    15.6  855801447 1056303379 mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+158    WindowServer     9.4  47:13.97 15     5   3156-  1712M+ 145M  119M+ 158   1    sleeping *0[1]    0.00263 0.16350    88  17663789+ 39199  29197088+ 27450144+ 51487370+ 92629810+ 21385123+  10188   621706+   11.6  310682927 593696354  _windowserver N/A    N/A   N/A   N/A   N/A   N/A  
+416    Google Chrome    9.1  14:48.39 45     2   1357+  351M+  156K  72M   416   1    sleeping *0[2307] 0.12649 0.00000    501 5582445+  199098 8621356+  3629366+  11409478+ 33923584+ 5571942+   69527   440772+   10.0  474980382 579781128  mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+74339  top              5.5  00:01.02 1/1    0   27+    4112K+ 0B    0B    74339 541  running  *0[1]    0.02885 0.00000    0   2757+     120+   1061178+  530583+   4948+     540290+   78+        3       1+        5.5   466756730 475811573  root          N/A    N/A   N/A   N/A   N/A   N/A  
+0      kernel_task      4.1  28:43.49 298/16 0   0      205M-  0B    0B    0     0    running   0[0]    0.00000 0.00000    0   260708    8275   62428663+ 51515940+ 0         0         245001386+ 251     10653601+ 0.0   106174798 268139151  root          N/A    N/A   N/A   N/A   N/A   N/A  
+101    powerd           1.4  00:45.54 4      3   140    2996K  0B    480K  101   1    sleeping *0[1]    0.01849 0.05912    0   153863+   175    254192+   160875+   652408+   469169+   299356+    3719    4289      1.4   9847289   135599576  root          N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 594 total, 3 running, 591 sleeping, 2999 threads 
+2023/05/21 11:40:04
+Load Avg: 1.34, 1.67, 1.78 
+CPU usage: 3.93% user, 5.50% sys, 90.55% idle 
+SharedLibs: 418M resident, 49M data, 29M linkedit.
+MemRegions: 498280 total, 2975M resident, 147M private, 2127M shared.
+PhysMem: 18G used (3695M wired, 1751M compressor), 14G unused.
+VM: 57T vsize, 3444M framework vsize, 15425755(0) swapins, 17297986(0) swapouts.
+Networks: packets: 3760654/3403M in, 1967649/579M out.
+Disks: 3309971/109G read, 2396759/114G written.
+
+PID    COMMAND          %CPU TIME     #TH #WQ #PORTS MEM   PURG  CMPRS PGRP  PPID STATE    BOOSTS %CPU_ME %CPU_OTHRS UID FAULTS COW  MSGSENT MSGRECV SYSBSD SYSMACH CSW PAGEINS IDLEW POWER INSTRS CYCLES USER    #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+74345  top              0.0  00:00.87 1/1 0   16     3932K 0B    0B    74345 541  running  *0[1]  0.00000 0.00000    0   2086   118  1045781 522890  2554   527735  112 3       0     0.0   0      0      root    N/A    N/A   N/A   N/A   N/A   N/A  
+74344  mdworker_shared  0.0  00:00.06 3   1   51     1248K 0B    0B    74344 1    sleeping *0[1]  0.00000 0.00000    501 4162   171  604     269     719    570     86  18      0     0.0   0      0      mohamed N/A    N/A   N/A   N/A   N/A   N/A  
+74343  mdworker_shared  0.0  00:00.06 3   1   51     1296K 0B    0B    74343 1    sleeping *0[1]  0.00000 0.00000    501 4165   171  605     270     716    575     87  18      0     0.0   0      0      mohamed N/A    N/A   N/A   N/A   N/A   N/A  
+74342  mdworker_shared  0.0  00:00.06 3   1   51     1348K 0B    0B    74342 1    sleeping *0[1]  0.00000 0.00000    501 4169   171  621     276     765    594     97  18      0     0.0   0      0      mohamed N/A    N/A   N/A   N/A   N/A   N/A  
+74341  mdworker_shared  0.0  00:00.06 3   1   51     1280K 0B    0B    74341 1    sleeping *0[1]  0.00000 0.00000    501 4158   171  605     268     771    587     96  18      0     0.0   0      0      mohamed N/A    N/A   N/A   N/A   N/A   N/A  
+74332  com.apple.ColorS 0.0  00:00.01 2   1   24     612K  0B    0B    74332 1    sleeping *0[2]  0.00000 0.00000    501 913    119  116     45      387    230     45  2       0     0.0   0      0      mohamed N/A    N/A   N/A   N/A   N/A   N/A  
+74331  cupsd            0.0  00:00.08 3   1   52     2320K 0B    0B    74331 1    sleeping *0[1]  0.00000 0.00000    0   3880   135  138     48      1394   294     148 3       1     0.0   0      0      root    N/A    N/A   N/A   N/A   N/A   N/A  
+74330  printtool        0.0  00:00.11 3   1   136    3072K 0B    0B    74330 1    sleeping *0[26] 0.00000 0.00000    501 5954   258  713     167     1862   1472    593 22      3     0.0   0      0      mohamed N/A    N/A   N/A   N/A   N/A   N/A  
+74323  mdworker_shared  0.0  00:00.09 3   1   51     1360K 0B    0B    74323 1    sleeping *0[1]  0.00000 0.00000    501 5011   171  751     317     1318   786     177 18      0     0.0   0      0      mohamed N/A    N/A   N/A   N/A   N/A   N/A  
+74315  Google Chrome He 0.0  00:00.08 11  1   90     14M   4096B 0B    416   416  sleeping *0[3]  0.00000 0.00000    501 11511  2346 227     135     1407   724     139 0       27    0.0   0      0      mohamed N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 594 total, 2 running, 592 sleeping, 3004 threads 
+2023/05/21 11:40:06
+Load Avg: 1.39, 1.68, 1.79 
+CPU usage: 3.9% user, 1.53% sys, 95.37% idle 
+SharedLibs: 418M resident, 49M data, 29M linkedit.
+MemRegions: 498280 total, 2975M resident, 147M private, 2127M shared.
+PhysMem: 18G used (3695M wired, 1751M compressor), 14G unused.
+VM: 57T vsize, 3444M framework vsize, 15425755(0) swapins, 17297986(0) swapouts.
+Networks: packets: 3760750/3403M in, 1967660/579M out.
+Disks: 3309971/109G read, 2396769/114G written.
+
+PID    COMMAND          %CPU TIME     #TH    #WQ #PORTS MEM    PURG   CMPRS PGRP  PPID STATE    BOOSTS    %CPU_ME %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD    SYSMACH   CSW        PAGEINS IDLEW     POWER INSTRS     CYCLES     USER          #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+1677   Google Chrome He 17.4 01:05.89 29     1   513-   97M-   0B     17M   416   416  sleeping *0[6]     0.00000 0.00000    501 643175+   9116+   161926+   84724+    439380+   517451+   222211+    2813    11602+    17.7  1638032947 1602771586 mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+593    Google Chrome He 14.7 08:01.38 29     1   403    235M-  3800K  50M   416   416  sleeping *1[5]     0.05397 0.00000    501 2808923+  3072    6450587+  2892896+  2926283+  8429095+  2290527+   9753    97897+    15.7  858094766  1074919237 mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+416    Google Chrome    9.8  14:51.19 44     1   1356   351M+  156K   72M   416   1    sleeping *0[2307]  0.12846 0.00000    501 5583796+  199099+ 8642519+  3637936+  11427844+ 34016727+ 5584559+   69527   441307+   10.6  521786288  633241681  mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+158    WindowServer     9.5  47:16.10 14     4   3156-  1712M- 147M+  119M  158   1    sleeping *0[1]     0.00304 0.15708    88  17666983+ 39199   29212960+ 27464154+ 51513697+ 92682674+ 21394834+  10188   622706+   11.5  306983904  603581869  _windowserver N/A    N/A   N/A   N/A   N/A   N/A  
+74345  top              5.5  00:01.03 1/1    0   27+    4172K+ 0B     0B    74345 541  running  *0[1]     0.02428 0.00000    0   2779+     120+    1061536+  530762+   4972+     540441+   126+       3       0         5.5   468775880  479881030  root          N/A    N/A   N/A   N/A   N/A   N/A  
+0      kernel_task      4.0  28:44.53 298/16 0   0      206M+  0B     0B    0     0    running   0[0]     0.00000 0.00000    0   260708    8275    62994121+ 52076610+ 0         0         245199874+ 251     10658174+ 0.0   111071175  260270506  root          N/A    N/A   N/A   N/A   N/A   N/A  
+353    TouchBarServer   0.5  02:40.82 7      3   345+   36M+   5888K+ 14M-  353   1    sleeping *0[1]     0.00000 0.04006    0   193734+   2747    1509496+  732078+   3451069+  5943488+  2590707+   2001    77291+    0.5   15188538   48538792   root          N/A    N/A   N/A   N/A   N/A   N/A  
+35938  Microsoft Outloo 0.5  15:31.81 21     7   3144   466M+  26M    200M  35938 1    sleeping  0[5685]  0.00000 0.00000    501 6946802+  21582   4666685+  1601120+  4219372+  8594725+  2343799+   39769   94491+    0.5   17245385   25575991   mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+70215  zoom.us          0.3  62:05.65 28     3   4379   277M   1172K  187M  70215 1    sleeping  0[35721] 0.00000 0.00000    501 21452510  2957    18998237+ 6482433   78473374+ 32430906+ 53632203+  21456   15195065+ 2.0   4358012    19843557   mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+435    Terminal         0.3  01:12.01 11     5   480-   126M-  61M+   21M   435   1    sleeping *0[2425]  0.03176 0.00000    501 3543654+  650     262884+   43417+    532803+   526947+   231073+    8449    6386+     0.3   23974098   30165371   mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 594 total, 2 running, 592 sleeping, 3008 threads 
+2023/05/21 11:40:08
+Load Avg: 1.39, 1.68, 1.79 
+CPU usage: 2.92% user, 1.56% sys, 95.50% idle 
+SharedLibs: 418M resident, 49M data, 29M linkedit.
+MemRegions: 498280 total, 2975M resident, 147M private, 2127M shared.
+PhysMem: 18G used (3688M wired, 1751M compressor), 14G unused.
+VM: 57T vsize, 3444M framework vsize, 15425755(0) swapins, 17297986(0) swapouts.
+Networks: packets: 3760751/3403M in, 1967661/579M out.
+Disks: 3309971/109G read, 2396769/114G written.
+
+PID    COMMAND          %CPU TIME     #TH    #WQ #PORTS MEM    PURG   CMPRS PGRP  PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD    SYSMACH   CSW        PAGEINS IDLEW     POWER INSTRS     CYCLES     USER          #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+593    Google Chrome He 16.1 08:01.72 29     1   403    228M-  3800K  50M   416   416  sleeping *1[5]      0.05958  0.00000    501 2809072+  3072    6454393+  2894646+  2926602+  8433155+  2291273+   9753    97957+    17.5  631090850  764779336  mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+483    Finder           14.8 30:46.50 10     5   1521+  270M+  312K   136M  483   1    sleeping *0[13447+] 0.01823  12.26681   501 3727753+  1102    6714420+  4279437+  63474582+ 36221439+ 3865015+   37603   40299+    14.9  1187218466 1098755729 mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+158    WindowServer     10.7 47:16.32 13     3   3153-  1712M- 147M   119M  158   1    sleeping *0[1]      0.00000  0.18083    88  17667233+ 39199   29214446+ 27465493+ 51516257+ 92687958+ 21396135+  10188   622826+   13.6  208843415  422613727  _windowserver N/A    N/A   N/A   N/A   N/A   N/A  
+416    Google Chrome    10.5 14:51.41 44     1   1356   351M   156K   72M   416   1    sleeping *0[2307]   0.15095  0.00000    501 5583921+  199099  8644154+  3638552+  11429297+ 34024063+ 5585565+   69527   441345+   11.5  351369833  419093042  mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+71442  Google Drive     4.3  05:12.18 91     1   580    2724M  52K    2625M 714   714  sleeping *0[407]    0.00000  0.00000    501 1096830   3865    1442339+  85831     26066218+ 14513480+ 6027184+   12179   24523     4.3   221847404  300506422  mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+0      kernel_task      4.1  28:44.61 298/16 0   0      205M-  0B     0B    0     0    running   0[0]      0.00000  0.00000    0   260708    8275    63004855+ 52086612+ 0         0         245220718+ 251     10658546+ 0.0   76081410   171670131  root          N/A    N/A   N/A   N/A   N/A   N/A  
+74345  top              3.6  00:01.11 1/1    0   27     4200K+ 0B     0B    74345 541  running  *0[1]      0.00000  0.00000    0   3382+     120     1077078+  538533+   7361+     553008+   130+       3       1+        3.7   140922453  218012534  root          N/A    N/A   N/A   N/A   N/A   N/A  
+71463  FinderSyncExtens 3.1  01:45.34 6      2   154+   5284K+ 0B     2664K 71463 1    sleeping *0[440]    12.26681 0.00000    501 42600+    407     585577+   555589+   13310351+ 1712079+  2328214+   1232    1769+     3.1   179117488  218408218  mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+1677   Google Chrome He 1.0  01:05.92 29     1   513    98M+   0B     17M   416   416  sleeping *0[6]      0.00000  0.00000    501 643597+   9125+   161962+   84747+    439507+   517567+   222262+    2813    11608+    1.2   99653902   62929007   mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+289    mds_stores       0.5  04:51.77 11     9   119+   47M+   96K    32M   289   1    sleeping *0[1]      0.00000  0.43191    0   4337383+  4023    305032+   169726+   8914285+  720919+   2540255+   104234+ 6275      0.5   22486988   23257540   root          N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 594 total, 3 running, 591 sleeping, 2978 threads 
+2023/05/21 11:40:10
+Load Avg: 1.39, 1.68, 1.79 
+CPU usage: 2.4% user, 1.5% sys, 96.89% idle 
+SharedLibs: 418M resident, 49M data, 29M linkedit.
+MemRegions: 498280 total, 2975M resident, 147M private, 2127M shared.
+PhysMem: 18G used (3688M wired, 1751M compressor), 14G unused.
+VM: 57T vsize, 3444M framework vsize, 15425755(0) swapins, 17297986(0) swapouts.
+Networks: packets: 3760752/3403M in, 1967662/579M out.
+Disks: 3309971/109G read, 2396769/114G written.
+
+PID    COMMAND          %CPU TIME     #TH    #WQ #PORTS MEM    PURG   CMPRS PGRP  PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD    SYSMACH   CSW        PAGEINS IDLEW     POWER INSTRS     CYCLES     USER          #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+593    Google Chrome He 16.7 08:02.07 29     1   403    228M   3800K  50M   416   416  sleeping *1[5]      0.05997  0.00000    501 2809220+  3072    6458192+  2896390+  2927117+  8437213+  2291973+   9753    98030+    18.4  630583703  758492988  mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+416    Google Chrome    10.8 14:51.64 44     1   1356   351M   156K   72M   416   1    sleeping *0[2307]   0.15127  0.00000    501 5584027+  199099  8645739+  3639137+  11430738+ 34031201+ 5586557+   69527   441393+   12.0  342922958  404082938  mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+158    WindowServer     10.8 47:16.55 11/1   3   3149-  1712M- 147M   119M  158   1    running  *0[1]      0.00000  0.17615    88  17667424+ 39199   29215878+ 27466734+ 51518642+ 92692961+ 21397414+  10188   622955+   13.9  199104617  398931284  _windowserver N/A    N/A   N/A   N/A   N/A   N/A  
+0      kernel_task      4.1  28:44.70 298/16 0   0      205M   0B     0B    0     0    running   0[0]      0.00000  0.00000    0   260708    8275    63015209+ 52096586+ 0         0         245234726+ 251     10658975+ 0.0   68390937   160353709  root          N/A    N/A   N/A   N/A   N/A   N/A  
+74345  top              3.6  00:01.19 1/1    0   27     4220K+ 0B     0B    74345 541  running  *0[1]      0.00000  0.00000    0   3983+     120     1092560+  546274+   9743+     565515+   135+       3       2+        3.6   140171838  216351448  root          N/A    N/A   N/A   N/A   N/A   N/A  
+1677   Google Chrome He 1.0  01:05.94 29     1   513    98M+   0B     17M   416   416  sleeping *0[6]      0.00000  0.00000    501 643828+   9132+   161995+   84770+    439590+   517675+   222298+    2813    11613+    1.1   86745874   53260354   mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+70215  zoom.us          0.4  62:05.67 27     2   4375-  277M-  1172K  187M  70215 1    sleeping  0[35721]  0.00000  0.00000    501 21452510  2957    18998238+ 6482433   78473840+ 32430911+ 53632670+  21456   15195285+ 3.1   3241033    15384006   mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+71442  Google Drive     0.2  05:12.19 91     1   580    2724M  52K    2625M 714   714  sleeping *0[407]    0.00000  0.00000    501 1096830   3865    1442341+  85831     26066450+ 14513513+ 6027261+   12179   24526+    0.3   4623021    9484523    mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+353    TouchBarServer   0.2  02:40.83 4      1   334-   36M-   5888K  14M   353   1    sleeping *0[1]      0.00000  0.04401    0   193734    2747    1509499+  732079+   3451358+  5943777+  2590852+   2001    77292+    0.2   2054687    7899517    root          N/A    N/A   N/A   N/A   N/A   N/A  
+665    RdrCEF Helper (G 0.2  01:34.29 9      1   176    44M    0B     34M   653   653  sleeping *1[5]      0.00000  0.00000    501 37419     2728    4615      2475      5711      1310794+  1333802+   2297    750556+   1.1   1171200    7342389    mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 594 total, 3 running, 591 sleeping, 2967 threads 
+2023/05/21 11:40:12
+Load Avg: 1.36, 1.67, 1.78 
+CPU usage: 2.10% user, 1.17% sys, 96.72% idle 
+SharedLibs: 418M resident, 49M data, 29M linkedit.
+MemRegions: 498280 total, 2975M resident, 147M private, 2127M shared.
+PhysMem: 18G used (3688M wired, 1751M compressor), 14G unused.
+VM: 57T vsize, 3444M framework vsize, 15425755(0) swapins, 17297986(0) swapouts.
+Networks: packets: 3760752/3403M in, 1967662/579M out.
+Disks: 3309971/109G read, 2396782/114G written.
+
+PID    COMMAND          %CPU TIME     #TH    #WQ #PORTS MEM    PURG   CMPRS PGRP  PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW     MSGSENT   MSGRECV   SYSBSD    SYSMACH   CSW        PAGEINS IDLEW     POWER INSTRS     CYCLES     USER          #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+593    Google Chrome He 16.8 08:02.42 29     1   403    228M   3800K  50M   416   416  sleeping *1[5]      0.06418  0.00000    501 2809371+  3072    6462059+  2898171+  2927448+  8441345+  2292675+   9753    98099+    18.5  640189431  767439434  mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+158    WindowServer     11.2 47:16.78 12     3   3151+  1712M+ 147M   119M  158   1    sleeping *0[1]      0.03258  0.17500    88  17667627+ 39199   29217346+ 27467971+ 51521009+ 92698031+ 21398712+  10188   623099+   14.7  207763737  410469329  _windowserver N/A    N/A   N/A   N/A   N/A   N/A  
+416    Google Chrome    11.0 14:51.87 44/1   1   1357+  351M   156K   72M   416   1    running  *0[2307]   0.15259  0.00000    501 5584138+  199099  8647365+  3639741+  11432172+ 34038573+ 5587557+   69527   441446+   12.3  348610972  411487150  mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+0      kernel_task      4.3  28:44.79 298/16 0   0      205M   0B     0B    0     0    running   0[0]      0.00000  0.00000    0   260708    8275    63025596+ 52106589+ 0         0         245249008+ 251     10659418+ 0.0   71095743   164124768  root          N/A    N/A   N/A   N/A   N/A   N/A  
+74345  top              3.7  00:01.26 1/1    0   27     4260K+ 0B     0B    74345 541  running  *0[1]      0.00000  0.00000    0   4589+     120     1108020+  554004+   12125+    578002+   138+       3       3+        3.7   139832819  220002045  root          N/A    N/A   N/A   N/A   N/A   N/A  
+1677   Google Chrome He 1.0  01:05.96 29     1   513    98M    0B     17M   416   416  sleeping *0[6]      0.00000  0.00000    501 644069+   9141+   162025+   84791+    439673+   517787+   222337+    2813    11620+    1.1   87227732   52389086   mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+70215  zoom.us          0.4  62:05.68 27     2   4375   277M   1172K  187M  70215 1    sleeping  0[35721]  0.00000  0.00000    501 21452510  2957    18998238  6482433   78474063+ 32430911  53632898+  21456   15195423+ 3.8   3105910    15234471   mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+594    Google Chrome He 0.3  02:33.27 24     1   182    46M    0B     15M   416   416  sleeping *0[3]      0.03492  0.00000    501 669869    6385    1209573+  614702+   4543863+  1854970+  1269169+   9223    46259+    0.4   7151106    14641882   mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+74287  Google Chrome He 0.2  00:02.81 26     1   151    83M+   4096B  0B    416   416  sleeping *0[3]      0.00000  0.00000    501 87538+    2349    7413      4133      26765+    25034+    15950+     0       4254+     0.6   1212610    7676171    mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+353    TouchBarServer   0.2  02:40.84 4      1   334    36M    5888K  14M   353   1    sleeping *0[1]      0.00000  0.04462    0   193734    2747    1509499   732079    3451490+  5943909+  2590920+   2001    77292     0.2   1894649    7224992    root          N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 591 total, 2 running, 589 sleeping, 2992 threads 
+2023/05/21 11:41:07
+Load Avg: 1.38, 1.60, 1.75 
+CPU usage: 3.54% user, 5.53% sys, 90.92% idle 
+SharedLibs: 418M resident, 49M data, 29M linkedit.
+MemRegions: 498101 total, 2972M resident, 146M private, 2127M shared.
+PhysMem: 18G used (3697M wired, 1751M compressor), 14G unused.
+VM: 57T vsize, 3444M framework vsize, 15425819(0) swapins, 17297986(0) swapouts.
+Networks: packets: 3760820/3403M in, 1967729/579M out.
+Disks: 3309985/109G read, 2397394/114G written.
+
+PID    COMMAND          %CPU TIME     #TH #WQ #PORTS MEM   PURG  CMPRS PGRP  PPID STATE    BOOSTS %CPU_ME %CPU_OTHRS UID FAULTS COW  MSGSENT MSGRECV SYSBSD SYSMACH CSW PAGEINS IDLEW POWER INSTRS CYCLES USER    #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+74348  top              0.0  00:00.85 1/1 0   16     3928K 0B    0B    74348 541  running  *0[1]  0.00000 0.00000    0   2077   117  1045265 522632  2542   527462  90  3       0     0.0   0      0      root    N/A    N/A   N/A   N/A   N/A   N/A  
+74346  mdworker_shared  0.0  00:00.11 4   1   53     1280K 0B    0B    74346 1    sleeping *0[1]  0.00000 0.00000    501 5725   173  625     277     2507   614     105 18      1     0.0   0      0      mohamed N/A    N/A   N/A   N/A   N/A   N/A  
+74343  mdworker_shared  0.0  00:00.07 3   1   51     1392K 0B    0B    74343 1    sleeping *0[1]  0.00000 0.00000    501 4949   171  679     294     1037   690     139 18      0     0.0   0      0      mohamed N/A    N/A   N/A   N/A   N/A   N/A  
+74332  com.apple.ColorS 0.0  00:00.01 2   1   24     612K  0B    0B    74332 1    sleeping *0[2]  0.00000 0.00000    501 913    119  116     45      387    230     45  2       0     0.0   0      0      mohamed N/A    N/A   N/A   N/A   N/A   N/A  
+74331  cupsd            0.0  00:00.08 3   1   52     2320K 0B    0B    74331 1    sleeping *0[1]  0.00000 0.00000    0   3880   135  138     48      1394   294     148 3       1     0.0   0      0      root    N/A    N/A   N/A   N/A   N/A   N/A  
+74330  printtool        0.0  00:00.11 3   1   136    3072K 0B    0B    74330 1    sleeping *0[26] 0.00000 0.00000    501 5954   258  713     167     1862   1472    593 22      3     0.0   0      0      mohamed N/A    N/A   N/A   N/A   N/A   N/A  
+74315  Google Chrome He 0.0  00:00.08 11  1   90     14M   4096B 0B    416   416  sleeping *0[3]  0.00000 0.00000    501 11511  2346 236     139     1415   749     152 0       34    0.0   0      0      mohamed N/A    N/A   N/A   N/A   N/A   N/A  
+74313  Google Chrome He 0.0  00:00.06 8   1   57     11M   4096B 0B    416   416  sleeping *0[3]  0.00000 0.00000    501 8727   2332 151     98      1040   631     236 0       73    0.0   0      0      mohamed N/A    N/A   N/A   N/A   N/A   N/A  
+74312  Google Chrome He 0.0  00:00.08 11  1   107    15M   4096B 0B    416   416  sleeping *0[3]  0.00000 0.00000    501 12815  2346 309     205     1531   1054    190 0       28    0.0   0      0      mohamed N/A    N/A   N/A   N/A   N/A   N/A  
+74297  exchangesyncd    0.0  00:00.07 2   1   54     1788K 16K   0B    74297 1    sleeping *0[1]  0.00000 0.00000    501 3555   204  185     57      1133   393     276 170     2     0.0   0      0      mohamed N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 591 total, 2 running, 589 sleeping, 2985 threads 
+2023/05/21 11:41:10
+Load Avg: 1.38, 1.60, 1.75 
+CPU usage: 2.7% user, 1.35% sys, 96.56% idle 
+SharedLibs: 418M resident, 49M data, 29M linkedit.
+MemRegions: 498101 total, 2972M resident, 146M private, 2127M shared.
+PhysMem: 18G used (3689M wired, 1751M compressor), 14G unused.
+VM: 57T vsize, 3444M framework vsize, 15425819(0) swapins, 17297986(0) swapouts.
+Networks: packets: 3760824/3403M in, 1967733/579M out.
+Disks: 3309985/109G read, 2397394/114G written.
+
+PID    COMMAND          %CPU TIME     #TH    #WQ #PORTS MEM    PURG  CMPRS PGRP  PPID STATE    BOOSTS    %CPU_ME %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD    SYSMACH   CSW        PAGEINS IDLEW     POWER INSTRS    CYCLES     USER          #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+593    Google Chrome He 14.4 08:12.26 29     1   403    228M-  3800K 50M   416   416  sleeping *1[5]     0.05276 0.00000    501 2813511+  3072   6567620+  2946730+  2939208+  8553951+  2314574+   9753    100803+   15.9  844933733 1033400111 mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+158    WindowServer     9.6  47:22.52 15     5   3157-  1714M- 147M+ 119M  158   1    sleeping *0[1]     0.00249 0.16976    88  17676694+ 39199  29263625+ 27506598+ 51590988+ 92837713+ 21427219+  10188   625456+   11.8  299705661 591284221  _windowserver N/A    N/A   N/A   N/A   N/A   N/A  
+416    Google Chrome    9.2  14:58.03 45     2   1356   351M   156K  72M   416   1    sleeping *0[2307]  0.12681 0.00000    501 5587164+  199099 8692303+  3656591+  11470840+ 34237830+ 5615341+   69527   442696+   10.0  472775852 571458123  mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+74348  top              5.5  00:01.01 1/1    0   27+    4144K+ 0B    0B    74348 541  running  *0[1]     0.02346 0.00000    0   2761+     119+   1060934+  530461+   4948+     540094+   109+       3       0         5.5   467232184 480145765  root          N/A    N/A   N/A   N/A   N/A   N/A  
+0      kernel_task      3.8  28:47.18 298/17 0   0      205M-  0B    0B    0     0    running   0[0]     0.00000 0.00000    0   260712    8275   63643738+ 52712830+ 0         0         245712134+ 251     10670408+ 0.0   106280876 247056142  root          N/A    N/A   N/A   N/A   N/A   N/A  
+483    Finder           0.8  30:48.40 10     5   1523   270M   312K  136M  483   1    sleeping *0[13459] 0.01471 0.00000    501 3729347+  1102   6719760+  4283749+  63554651+ 36258649+ 3867764+   37603   40320     0.8   94110291  93745054   mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+1677   Google Chrome He 0.6  01:07.04 29     1   512    99M+   0B    17M   416   416  sleeping *0[6]     0.00000 0.00000    501 652445+   9368+  163186+   85494+    446307+   522367+   224638+    2813    11756+    0.7   87691892  53402270   mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+353    TouchBarServer   0.5  02:41.67 7      3   346    36M+   5888K 14M   353   1    sleeping *0[1]     0.00000 0.04254    0   193789+   2747   1515384+  735221+   3464471+  5963570+  2601456+   2001    77569+    0.6   15724974  49184862   root          N/A    N/A   N/A   N/A   N/A   N/A  
+70215  zoom.us          0.3  62:06.08 28     3   4380   277M   1172K 187M  70215 1    sleeping  0[35737] 0.00000 0.00000    501 21452547  2957   18999116  6482900   78482790+ 32434159  53641217+  21456   15198939+ 2.7   3904713   18677896   mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+435    Terminal         0.2  01:14.36 12     6   483    126M-  61M+  21M   435   1    sleeping *0[2464]  0.02542 0.00000    501 3592710+  650    273013+   44917+    548376+   551138+   237062+    8723    6828+     0.3   23073373  27839630   mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 591 total, 4 running, 587 sleeping, 2983 threads 
+2023/05/21 11:41:12
+Load Avg: 1.43, 1.61, 1.75 
+CPU usage: 2.11% user, 1.5% sys, 96.83% idle 
+SharedLibs: 418M resident, 49M data, 29M linkedit.
+MemRegions: 498101 total, 2972M resident, 146M private, 2127M shared.
+PhysMem: 18G used (3689M wired, 1751M compressor), 14G unused.
+VM: 57T vsize, 3444M framework vsize, 15425819(0) swapins, 17297986(0) swapouts.
+Networks: packets: 3760825/3403M in, 1967734/579M out.
+Disks: 3309985/109G read, 2397394/114G written.
+
+PID    COMMAND          %CPU TIME     #TH    #WQ #PORTS MEM    PURG  CMPRS PGRP  PPID STATE    BOOSTS    %CPU_ME %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD    SYSMACH   CSW        PAGEINS IDLEW     POWER INSTRS    CYCLES     USER          #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+593    Google Chrome He 16.9 08:12.62 29/1   1   403    228M   3800K 50M   416   416  running  *1[5]     0.06077 0.00000    501 2813662+  3072   6571443+  2948488+  2939738+  8558037+  2315287+   9753    100893+   19.1  639803160 772470617  mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+158    WindowServer     11.0 47:22.75 13/1   3   3153-  1714M- 147M  119M  158   1    running  *0[1]     0.00000 0.17262    88  17676887+ 39199  29265073+ 27507853+ 51593382+ 92842774+ 21428502+  10188   625589+   14.2  202754787 405217947  _windowserver N/A    N/A   N/A   N/A   N/A   N/A  
+416    Google Chrome    10.9 14:58.26 45     2   1356   351M   156K  72M   416   1    sleeping *0[2307]  0.15183 0.00000    501 5587274+  199099 8693920+  3657194+  11472251+ 34245024+ 5616344+   69527   442744+   12.1  343390478 403946553  mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+0      kernel_task      4.2  28:47.27 298/16 0   0      205M   0B    0B    0     0    running   0[0]     0.00000 0.00000    0   260712    8275   63654068+ 52722780+ 0         0         245726211+ 251     10670832+ 0.0   68409790  162207527  root          N/A    N/A   N/A   N/A   N/A   N/A  
+74348  top              3.6  00:01.09 1/1    0   27     4188K+ 0B    0B    74348 541  running  *0[1]     0.00000 0.00000    0   3365+     119    1076378+  538183+   7325+     552579+   111+       3       0         3.6   140136154 215499079  root          N/A    N/A   N/A   N/A   N/A   N/A  
+1677   Google Chrome He 0.9  01:07.06 29     1   512    99M-   0B    17M   416   416  sleeping *0[6]     0.00000 0.00000    501 652644+   9376+  163218+   85515+    446396+   522481+   224679+    2813    11760+    1.0   86735589  53606672   mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+70215  zoom.us          0.3  62:06.09 28     3   4380   277M   1172K 187M  70215 1    sleeping  0[35737] 0.00000 0.00000    501 21452547  2957   18999116  6482900   78483015+ 32434159  53641449+  21456   15199018+ 2.2   3302113   14439272   mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+134    locationd        0.2  01:08.51 6      3   245+   7872K+ 384K  1988K 134   1    sleeping *4[5510]  0.00625 0.19886    205 200859+   356    111425+   94792+    1824457+  371372+   591751+    14306   14786+    0.3   11134175  11848494   _locationd    N/A    N/A   N/A   N/A   N/A   N/A  
+126    opendirectoryd   0.2  00:52.79 8      7   1538+  9260K+ 128K  2788K 126   1    sleeping *0[1]     0.00000 0.20294    0   392520+   155    121221+   108851+   2641595+  267971+   675532+    5574    2679      0.2   3671449   7957746    root          N/A    N/A   N/A   N/A   N/A   N/A  
+353    TouchBarServer   0.2  02:41.68 6      2   344-   36M-   5888K 14M   353   1    sleeping *0[1]     0.00000 0.04534    0   193789    2747   1515384   735221    3464606+  5963703+  2601526+   2001    77570+    0.2   1975920   7602696    root          N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 591 total, 2 running, 589 sleeping, 2960 threads 
+2023/05/21 11:41:14
+Load Avg: 1.43, 1.61, 1.75 
+CPU usage: 1.98% user, 1.5% sys, 96.95% idle 
+SharedLibs: 418M resident, 49M data, 29M linkedit.
+MemRegions: 498101 total, 2972M resident, 146M private, 2127M shared.
+PhysMem: 18G used (3689M wired, 1751M compressor), 14G unused.
+VM: 57T vsize, 3444M framework vsize, 15425819(0) swapins, 17297986(0) swapouts.
+Networks: packets: 3760825/3403M in, 1967734/579M out.
+Disks: 3309985/109G read, 2397394/114G written.
+
+PID    COMMAND          %CPU TIME     #TH    #WQ #PORTS MEM    PURG  CMPRS PGRP  PPID STATE    BOOSTS    %CPU_ME %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD    SYSMACH   CSW        PAGEINS IDLEW     POWER INSTRS    CYCLES     USER          #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+593    Google Chrome He 16.5 08:12.96 29     1   403    228M   3800K 50M   416   416  sleeping *1[5]     0.06299 0.00000    501 2813811+  3072   6575289+  2950255+  2940055+  8562132+  2315983+   9753    100933+   17.5  631164516 755201080  mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+416    Google Chrome    11.0 14:58.49 45     2   1356   351M   156K  72M   416   1    sleeping *0[2307]  0.14460 0.00000    501 5587387+  199099 8695584+  3657817+  11473738+ 34252429+ 5617360+   69527   442788+   12.1  351650188 413958879  mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+158    WindowServer     10.5 47:22.97 11     3   3149-  1714M- 147M  119M  158   1    sleeping *0[1]     0.00000 0.16512    88  17677078+ 39199  29266523+ 27509087+ 51595709+ 92847728+ 21429772+  10188   625719+   13.6  197188026 389827991  _windowserver N/A    N/A   N/A   N/A   N/A   N/A  
+0      kernel_task      4.2  28:47.36 298/16 0   0      205M   0B    0B    0     0    running   0[0]     0.00000 0.00000    0   260712    8275   63664380+ 52732725+ 0         0         245740265+ 251     10671320+ 0.0   69561249  157510457  root          N/A    N/A   N/A   N/A   N/A   N/A  
+74348  top              3.6  00:01.16 1/1    0   27     4212K+ 0B    0B    74348 541  running  *0[1]     0.00000 0.00000    0   3964+     119    1091776+  545882+   9702+     565017+   113+       3       0         3.6   140058368 216838343  root          N/A    N/A   N/A   N/A   N/A   N/A  
+1677   Google Chrome He 1.1  01:07.09 29     1   512    99M+   0B    17M   416   416  sleeping *0[6]     0.00000 0.00000    501 653070+   9384+  163252+   85537+    446491+   522607+   224721+    2813    11762+    1.1   96075987  57964583   mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+70215  zoom.us          0.4  62:06.10 27     2   4376-  277M-  1172K 187M  70215 1    sleeping  0[35737] 0.00000 0.00000    501 21452547  2957   18999117+ 6482900   78483253+ 32434164+ 53641691+  21456   15199109+ 2.6   3680704   16100580   mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+74287  Google Chrome He 0.2  00:02.96 26     1   151    84M+   4096B 0B    416   416  sleeping *0[3]     0.00000 0.00000    501 87943+    2349   7577+     4221+     26906+    26399+    17166+     0       4800+     0.7   2139587   10518395   mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+353    TouchBarServer   0.2  02:41.68 5      2   337-   36M-   5888K 14M   353   1    sleeping *0[1]     0.00000 0.04185    0   193789    2747   1515387+  735222+   3464740+  5963840+  2601594+   2001    77571+    0.2   1951067   7453285    root          N/A    N/A   N/A   N/A   N/A   N/A  
+665    RdrCEF Helper (G 0.2  01:34.43 9      1   176    44M    0B    34M   653   653  sleeping *1[5]     0.00000 0.00000    501 37419     2728   4615      2475      5711      1312631+  1335664+   2297    751501+   0.9   1169299   7150443    mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 591 total, 2 running, 589 sleeping, 2960 threads 
+2023/05/21 11:41:16
+Load Avg: 1.43, 1.61, 1.75 
+CPU usage: 2.23% user, 1.14% sys, 96.62% idle 
+SharedLibs: 418M resident, 49M data, 29M linkedit.
+MemRegions: 498101 total, 2972M resident, 146M private, 2127M shared.
+PhysMem: 18G used (3686M wired, 1751M compressor), 14G unused.
+VM: 57T vsize, 3444M framework vsize, 15425819(0) swapins, 17297986(0) swapouts.
+Networks: packets: 3760825/3403M in, 1967734/579M out.
+Disks: 3309985/109G read, 2397395/114G written.
+
+PID    COMMAND          %CPU TIME     #TH    #WQ #PORTS MEM    PURG  CMPRS PGRP  PPID STATE    BOOSTS    %CPU_ME %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD    SYSMACH   CSW        PAGEINS IDLEW     POWER INSTRS    CYCLES     USER          #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+593    Google Chrome He 16.6 08:13.31 29     1   403    228M   3800K 50M   416   416  sleeping *1[5]     0.05862 0.00000    501 2813959+  3072   6579092+  2952005+  2940583+  8566193+  2316669+   9753    100968+   17.5  630721993 758946643  mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+158    WindowServer     10.9 47:23.19 12     3   3151+  1712M- 147M  119M  158   1    sleeping *0[1]     0.01782 0.16984    88  17677277+ 39199  29267970+ 27510325+ 51598064+ 92852741+ 21431048+  10188   625854+   14.2  202662250 396222646  _windowserver N/A    N/A   N/A   N/A   N/A   N/A  
+416    Google Chrome    10.9 14:58.72 45     2   1356   351M   156K  72M   416   1    sleeping *0[2307]  0.15148 0.00000    501 5587511+  199099 8697179+  3658411+  11475199+ 34259601+ 5618370+   69527   442832+   12.0  346083275 405367302  mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+0      kernel_task      4.2  28:47.45 298/16 0   0      205M   0B    0B    0     0    running   0[0]     0.00000 0.00000    0   260712    8275   63674694+ 52742655+ 0         0         245754148+ 251     10671794+ 0.0   67683068  156378159  root          N/A    N/A   N/A   N/A   N/A   N/A  
+74348  top              3.5  00:01.23 1/1    0   27     4216K+ 0B    0B    74348 541  running  *0[1]     0.00000 0.00000    0   4558+     119    1107174+  553581+   12072+    577455+   114+       3       1+        3.5   139179233 212485081  root          N/A    N/A   N/A   N/A   N/A   N/A  
+1677   Google Chrome He 1.5  01:07.12 29     1   512    100M+  0B    17M   416   416  sleeping *0[6]     0.00000 0.00000    501 653511+   9396+  163302+   85571+    446618+   522774+   224776+    2813    11768+    1.7   133853784 80798235   mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+70215  zoom.us          0.4  62:06.11 27     2   4376   277M   1172K 187M  70215 1    sleeping  0[35737] 0.00000 0.00000    501 21452547  2957   18999117  6482900   78483479+ 32434164  53641922+  21456   15199235+ 3.5   3205407   15003858   mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+126    opendirectoryd   0.2  00:52.79 8      7   1540+  9260K  128K  2788K 126   1    sleeping *0[1]     0.00000 0.22552    0   392524+   155    121229+   108856+   2641840+  267989+   675580+    5574    2679      0.2   3752951   8614370    root          N/A    N/A   N/A   N/A   N/A   N/A  
+134    locationd        0.2  01:08.51 6      3   245    7876K+ 384K  1988K 134   1    sleeping *4[5510]  0.00398 0.18599    205 200860+   356    111434+   94801+    1824582+  371402+   591778+    14306   14789+    0.2   10317239  10262311   _locationd    N/A    N/A   N/A   N/A   N/A   N/A  
+353    TouchBarServer   0.2  02:41.69 4      1   335-   36M-   5888K 14M   353   1    sleeping *0[1]     0.00000 0.04586    0   193789    2747   1515387   735222    3464874+  5963973+  2601663+   2001    77572+    0.2   1928200   7391340    root          N/A    N/A   N/A   N/A   N/A   N/A  
+Processes: 591 total, 3 running, 588 sleeping, 2977 threads 
+2023/05/21 11:41:18
+Load Avg: 1.40, 1.60, 1.74 
+CPU usage: 2.80% user, 1.65% sys, 95.53% idle 
+SharedLibs: 418M resident, 49M data, 29M linkedit.
+MemRegions: 498101 total, 2972M resident, 146M private, 2127M shared.
+PhysMem: 18G used (3686M wired, 1751M compressor), 14G unused.
+VM: 57T vsize, 3444M framework vsize, 15425819(0) swapins, 17297986(0) swapouts.
+Networks: packets: 3760827/3403M in, 1967736/579M out.
+Disks: 3309985/109G read, 2397395/114G written.
+
+PID    COMMAND          %CPU TIME     #TH    #WQ #PORTS MEM    PURG  CMPRS PGRP  PPID STATE    BOOSTS     %CPU_ME  %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV   SYSBSD    SYSMACH   CSW        PAGEINS IDLEW     POWER INSTRS     CYCLES     USER          #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+593    Google Chrome He 16.5 08:13.65 29/1   1   403    228M   3800K 50M   416   416  running  *1[5]      0.05650  0.00000    501 2814110+  3072   6582902+  2953757+  2941113+  8570266+  2317450+   9753    101027+   17.9  638585447  787281133  mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+483    Finder           15.4 30:48.72 10     5   1521+  270M+  312K  136M  483   1    sleeping *0[13461+] 0.01783  12.79225   501 3729616+  1102   6720630+  4284406+  63567982+ 36264381+ 3868266+   37603   40324+    15.5  1187877496 1121548616 mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+416    Google Chrome    10.3 14:58.93 45     2   1356   351M   156K  72M   416   1    sleeping *0[2307]   0.13710  0.00000    501 5587616+  199099 8698784+  3659003+  11476560+ 34266717+ 5619370+   69527   442872+   11.2  342726708  408943334  mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+158    WindowServer     9.2  47:23.39 14     5   3153+  1712M+ 145M- 119M  158   1    sleeping *0[1]      0.05315  0.17550    88  17677551+ 39199  29269369+ 27511605+ 51600500+ 92857605+ 21432125+  10188   625959+   11.7  189582164  367422813  _windowserver N/A    N/A   N/A   N/A   N/A   N/A  
+71442  Google Drive     4.4  05:12.85 91     1   581    2724M  52K   2625M 714   714  sleeping *0[407]    0.00000  0.00000    501 1096841   3865   1447259+  85838     26143165+ 14572639+ 6049690+   12179   24594+    4.4   221754594  305474598  mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+0      kernel_task      4.1  28:47.53 298/16 0   0      205M   0B    0B    0     0    running   0[0]      0.00000  0.00000    0   260712    8275   63685455+ 52752660+ 0         0         245775597+ 251     10672185+ 0.0   76975568   169356303  root          N/A    N/A   N/A   N/A   N/A   N/A  
+74348  top              3.5  00:01.31 1/1    0   27     4220K+ 0B    0B    74348 541  running  *0[1]      0.00000  0.00000    0   5152+     119    1122606+  561297+   14442+    589927+   116+       3       1         3.5   139342488  208485146  root          N/A    N/A   N/A   N/A   N/A   N/A  
+71463  FinderSyncExtens 3.2  01:45.80 6      2   154+   5284K+ 0B    2664K 71463 1    sleeping *0[440]    12.79225 0.00000    501 42618+    407    588041+   557925+   13366484+ 1719271+  2337973+   1232    1777      3.2   178506266  225783903  mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+70215  zoom.us          1.1  62:06.13 27     2   4380+  277M+  1172K 187M- 70215 1    sleeping  0[35739+] 0.00000  0.00652    501 21452558+ 2957   18999211+ 6482943+  78483977+ 32434515+ 53642342+  21456   15199352+ 3.9   13583363   44036854   mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
+1677   Google Chrome He 0.9  01:07.14 29     1   512    101M+  0B    17M   416   416  sleeping *0[6]      0.00000  0.00000    501 653719+   9404+  163332+   85593+    446702+   522885+   224812+    2813    11773+    1.0   86732204   56591473   mohamed       N/A    N/A   N/A   N/A   N/A   N/A  
