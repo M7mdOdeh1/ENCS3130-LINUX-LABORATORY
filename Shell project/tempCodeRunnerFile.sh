@@ -134,7 +134,7 @@ commands_with_max_memory() {
 # extract the column with the memory usage
 memoryColumn=$(echo "$pid_lines" | awk '{ for (i=1; i<=NF; i++) { if ($i ~ /^[0-9]+[kKmMgG]?$/) { print $i; break } } }')
 # print number of lines of memoryColumn
-echo "$memoryColumn"
+
 # add memoryColumn to the first column of pid_lines
 pid_lines=$(paste <(echo "$memoryColumn") <(echo "$pid_lines"))
 
@@ -151,9 +151,8 @@ pid_lines=$(echo "$pid_lines" | head -n "$1")
 echo " ---------------------------------"
 echo " PID   Command          Memory"
 echo " ---   -------          ------"
-#echo "$pid_lines"
+echo "$pid_lines"
 echo " ---------------------------------"
-
 }
 
 
