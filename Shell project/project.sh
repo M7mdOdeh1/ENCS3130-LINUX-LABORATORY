@@ -129,21 +129,38 @@ echo "$pid_lines"
 echo " ---------------------------------"
 }
 
-# function to extract commands with the maximum average memory usage and sort them in descending order and print the first m lines
-commands_with_max_memory() {
+# function to sort the commands in descending order according to the maximum memory usage
+sort_command_memory() {
 # extract the column with the memory usage
-memoryColumn=$(echo "$pid_lines" | awk '{ for (i=1; i<=NF; i++) { if ($i ~ /^[0-9]+[kKmMgG]?$/) { print $i; break } } }')
+
+
+memoryColumn=$(echo "$pid_lines" | tr -d '/+-' | awk '{count=0; for (i=2; i<=NF; i++) { if ($i ~ /^[0-9]+[kKmMgGbB]?$/) { if (count < 3){ count++ } else { print $i; break} } } }')
 # print number of lines of memoryColumn
-echo "$memoryColumn"
-# add memoryColumn to the first column of pid_lines
+
+# convert the memory usage to bytes
+memoryColumn_bytes=$(echo "$memoryColumn" | awk '{ if ($1 ~ /[kK]$/) { printf "%d\n", $1 * 1024 } else if ($1 ~ /[mM]$/) { printf "%d\n", $1 * 1024 * 1024 } else if ($1 ~ /[gG]$/) { printf "%d\n", $1 * 1024 * 1024 * 1024 } else if ($1 ~ /[bB]$/) { printf "%d\n", $1 }}')
+# add memoryColumn and memoryColumn_bytes to the first column of pid_lines
 pid_lines=$(paste <(echo "$memoryColumn") <(echo "$pid_lines"))
+pid_lines=$(paste <(echo "$memoryColumn_bytes") <(echo "$pid_lines"))
+
+# add memoryColumn_bytes to the first column of memoryColumn_bytes
+memoryColumn=$(paste <(echo "$memoryColumn") <(echo "$memoryColumn_bytes"))
+#sort the lines in descending order according to the memory bytes
+memoryColumn=$(echo "$memoryColumn" | sort -nrk2)
 
 # sort the lines in descending order according to the memory usage
 pid_lines=$(echo "$pid_lines" | sort -nrk1)
 
+
+}
+
+# function to print m lines of the commands with the maximum memory usage
+print_commands_with_max_memory() {
 count=0
-# print the first 3 columns of pid_lines (PID, USER, and COMMAND) and print the first column untill find an integer (memory usage)
-pid_lines=$(echo "$pid_lines" | awk '{count=0; for (i=2; i<=NF; i++) { if ($i ~ /^[0-9]+[kKmMgG]?$/ && count < 2) { printf " %s  ", $i; count++ } else if (count == 2) { print ""; break } else{ printf "%s ", $i } } }')
+# print the first 3 columns of pid_lines (PID, Command, and Memory) and print the first column untill find an integer 
+pid_lines=$(echo "$pid_lines" | awk '{count=1; for (i=3; i<=NF; i++) { if ($i ~ /^[0-9]+(\.[0-9]+)?$/) { if (count < 2) {printf " %s  ", $i; count++} else if (count == 2){ printf " %s", 2; break } }   else{ printf "%s ", $i } } }')
+# add only the first column of memoryColumn to the first column of pid_lines
+pid_lines=$(paste <(echo "$pid_lines") <(echo "$memoryColumn"))
 
 # extract the first m lines
 pid_lines=$(echo "$pid_lines" | head -n "$1")
@@ -151,11 +168,25 @@ pid_lines=$(echo "$pid_lines" | head -n "$1")
 echo " ---------------------------------"
 echo " PID   Command          Memory"
 echo " ---   -------          ------"
-#echo "$pid_lines"
+echo "$pid_lines"
 echo " ---------------------------------"
-
 }
 
+# funtion to print m lines of the commands with the minimum memory usage
+print_commands_with_min_memory() {
+count=0
+# print the first 3 columns of pid_lines (PID, Command, and Memory) and print the first column untill find an integer
+pid_lines=$(echo "$pid_lines" | awk '{count=1; for (i=3; i<=NF; i++) { if ($i ~ /^[0-9]+(\.[0-9]+)?$/) { if (count < 2) {printf " %s  ", $i; count++} else if (count == 2){ print ""; break } }   else{ printf "%s ", $i } } }')
+pid_lines=$(paste <(echo "$pid_lines") <(echo "$memoryColumn"))
+# extract the last m lines
+pid_lines=$(echo "$pid_lines" | tail -n "$1")
+
+echo " ---------------------------------"
+echo " PID   Command          Memory"
+echo " ---   -------          ------"
+echo "$pid_lines"
+echo " ---------------------------------"
+}
 
 
 read_integer() {
@@ -189,31 +220,91 @@ do
         then
           echo "File exists"
         else
-          echo "File does not exist"
+          echo "File not found!!!"
         fi
         ;;
 
-    c) cpu_usage_info "$filename";;
+    c) # check if the filename exists
+        if file_exists "$filename" 
+        then
+        cpu_usage_info "$filename"
+        else
+          echo "File not found!!!"
+        fi
+        ;;
 
-    i) rcv_packets_info "$filename";;
-    o) sent_packets_info "$filename";;
+    i)  # check if the filename exists
+        if file_exists "$filename" 
+        then
+        rcv_packets_info "$filename"
+        else
+          echo "File not found!!!"
+        fi
+        ;;
+
+    o)  # check if the filename exists
+        if file_exists "$filename" 
+        then
+        sent_packets_info "$filename"
+        else
+          echo "File not found!!!"
+        fi  
+        ;;
     u) 
 
-       read_integer       
-       extract_commands "$filename"
-       commands_with_max_cpu "$m"
+        # check if the filename exists
+        if file_exists "$filename" 
+        then
+        read_integer       
+        extract_commands "$filename"
+        commands_with_max_cpu "$m"
+        else
+          echo "File not found!!!"
+        fi
 
-      ;;
+        ;;
     a) 
-       read_integer
-       extract_commands "$filename" 
-       commands_with_max_memory "$m"
+        # check if the filename exists
+        if file_exists "$filename" 
+        then
+        read_integer
+        extract_commands "$filename" 
+        sort_command_memory
+        print_commands_with_max_memory "$m"
+        else
+          echo "File not found!!!"
+        fi
        
-               ;;
+        ;;
 
-    b) ;;
-    e) exit 0;;
-    *) echo "Please enter one of the choices only!!!";;
+    b)  # check if the filename exists
+        if file_exists "$filename" 
+        then
+        read_integer
+        extract_commands "$filename"
+        sort_command_memory
+        print_commands_with_min_memory "$m"
+        else
+          echo "File not found!!!"
+        fi
+
+        ;;
+    e)  
+        # ask the user if he really wants to exit
+        read -p "Are you sure you want to exit? (yes/no): " exit_choice  
+        while [[ ! $exit_choice =~ ^(yes|no)$ ]]; do
+          echo "Invalid input"
+          read -p "Are you sure you want to exit? (yes/no): " exit_choice
+        done
+        if [ "$exit_choice" == "yes" ]
+        then
+          echo "Exiting..."
+          exit 0
+        else
+          echo "Returning to the main menu..."
+        fi
+        ;;
+    *)  echo "Please enter one of the choices only!!!";;
   esac
 done
 exit 0
