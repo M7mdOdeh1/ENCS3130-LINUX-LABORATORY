@@ -158,7 +158,7 @@ pid_lines=$(echo "$pid_lines" | sort -nrk1)
 print_commands_with_max_memory() {
 count=0
 # print the first 3 columns of pid_lines (PID, Command, and Memory) and print the first column untill find an integer 
-pid_lines=$(echo "$pid_lines" | awk '{count=1; for (i=3; i<=NF; i++) { if ($i ~ /^[0-9]+(\.[0-9]+)?$/) { if (count < 2) {printf " %s  ", $i; count++} else if (count == 2){ printf " %s", 2; break } }   else{ printf "%s ", $i } } }')
+pid_lines=$(echo "$pid_lines" | awk '{count=1; for (i=3; i<=NF; i++) { if ($i ~ /^[0-9]+(\.[0-9]+)?$/) { if (count < 2) {printf " %s  ", $i; count++} else if (count == 2){ print ""; break } }   else{ printf "%s ", $i } } }')
 # add only the first column of memoryColumn to the first column of pid_lines
 pid_lines=$(paste <(echo "$pid_lines") <(echo "$memoryColumn"))
 
@@ -166,24 +166,31 @@ pid_lines=$(paste <(echo "$pid_lines") <(echo "$memoryColumn"))
 pid_lines=$(echo "$pid_lines" | head -n "$1")
 
 echo " ---------------------------------"
-echo " PID   Command          Memory"
-echo " ---   -------          ------"
+echo " PID   Command          Memory   In Bytes"
+echo " ---   -------          ------   --------"
 echo "$pid_lines"
 echo " ---------------------------------"
 }
 
 # funtion to print m lines of the commands with the minimum memory usage
 print_commands_with_min_memory() {
+# sort the lines in ascending order according to the memory usage
+pid_lines=$(echo "$pid_lines" | sort -nk1)
+
+# sort the lines in ascending order according to the memory bytes
+memoryColumn=$(echo "$memoryColumn" | sort -nk2)
+
 count=0
 # print the first 3 columns of pid_lines (PID, Command, and Memory) and print the first column untill find an integer
 pid_lines=$(echo "$pid_lines" | awk '{count=1; for (i=3; i<=NF; i++) { if ($i ~ /^[0-9]+(\.[0-9]+)?$/) { if (count < 2) {printf " %s  ", $i; count++} else if (count == 2){ print ""; break } }   else{ printf "%s ", $i } } }')
 pid_lines=$(paste <(echo "$pid_lines") <(echo "$memoryColumn"))
-# extract the last m lines
-pid_lines=$(echo "$pid_lines" | tail -n "$1")
+# extract the first m lines
+pid_lines=$(echo "$pid_lines" | head -n "$1")
+
 
 echo " ---------------------------------"
-echo " PID   Command          Memory"
-echo " ---   -------          ------"
+echo " PID   Command                Memory   In Bytes"
+echo " ---   -------                ------   --------"
 echo "$pid_lines"
 echo " ---------------------------------"
 }
@@ -227,6 +234,7 @@ do
     c) # check if the filename exists
         if file_exists "$filename" 
         then
+        # call the function to print the average, minimum, and maximum CPU usage
         cpu_usage_info "$filename"
         else
           echo "File not found!!!"
@@ -236,6 +244,7 @@ do
     i)  # check if the filename exists
         if file_exists "$filename" 
         then
+        # call the function to print the average, minimum, and maximum received packets
         rcv_packets_info "$filename"
         else
           echo "File not found!!!"
@@ -245,6 +254,7 @@ do
     o)  # check if the filename exists
         if file_exists "$filename" 
         then
+        # call the function to print the average, minimum, and maximum sent packets
         sent_packets_info "$filename"
         else
           echo "File not found!!!"
@@ -255,8 +265,10 @@ do
         # check if the filename exists
         if file_exists "$filename" 
         then
-        read_integer       
+        read_integer     
+        # call the function to extract the commands from the file  
         extract_commands "$filename"
+        # call the function to sort the commands in descending order according to the CPU usage
         commands_with_max_cpu "$m"
         else
           echo "File not found!!!"
@@ -268,8 +280,11 @@ do
         if file_exists "$filename" 
         then
         read_integer
+        # call the function to extract the commands from the file
         extract_commands "$filename" 
+        # call the function to sort the commands in descending order according to the memory usage
         sort_command_memory
+        # call the function to print m lines of the commands with the maximum memory usage
         print_commands_with_max_memory "$m"
         else
           echo "File not found!!!"
@@ -281,8 +296,11 @@ do
         if file_exists "$filename" 
         then
         read_integer
+        # call the function to extract the commands from the file
         extract_commands "$filename"
+        # call the function to sort the commands in descending order according to the memory usage
         sort_command_memory
+        # call the function to print m lines of the commands with the minimum memory usage
         print_commands_with_min_memory "$m"
         else
           echo "File not found!!!"
