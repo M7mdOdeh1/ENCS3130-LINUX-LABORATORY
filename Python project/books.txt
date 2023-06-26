@@ -1,0 +1,63 @@
+ISBN10 : 0131103628
+ISBN13 : 978-0131103627
+Title : C Programming Language
+Publisher : Pearsonon
+Count : 2
+Count : 1
+Year : 1988
+Month : 3
+Paperback : 272 pages
+
+ISBN10 : 9780534948221
+ISBN13 : 978-0534948221
+Title : Microprocessor Systems Design: 68000 Family Hardware, Software, and Interfacing
+Publisher : CL-Engineering;
+Count : 1
+Count : 1
+ASIN : 0534948227
+Language : English
+Hardcover : 992 pages
+
+ISBN10 : 1803234512
+ISBN13 : 978-1803234519
+Title : Modern Computer Architecture and Organization: Learn x86, ARM, and RISC-V architectures and the design of smartphones, PCs, and cloud servers
+Publisher : Packt Publishing;
+Count : 1
+Count : 1
+Language : English
+Year : 2022
+Month : 5
+Paperback : 666 pages
+
+ISBN10 : 0131103628
+ISBN13 : 978-013110362
+Title : C Programming Language
+Publisher : Pearsonon
+Count : 1
+Count : 1
+Year : 1988
+Month : 3
+Paperback : 272 pages
+
+ISBN10 : 9780133923605
+ISBN13 : 978-0133923605
+Title : Introductory Circuit Analysis
+Publisher : Pearsonn
+Count : 1
+Count : 1
+ASIN : 0133923606
+Edition : 10
+Language : English
+Hardcover : 1216 pages
+Item Weight : 5.34 pounds
+
+ISBN10 : 1449339530
+ISBN13 : 978-1449339531
+Title : Linux System Programming: Talking Directly to the Kernel and C Library
+Publisher : O'Reilly Media
+Count : 1
+Edition : 2
+Year : 2013
+Month : 1
+Language : English
+Paperback : 456 pages

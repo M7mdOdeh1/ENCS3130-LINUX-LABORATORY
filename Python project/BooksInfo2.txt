@@ -1,0 +1,34 @@
+Title : Microprocessor Systems Design: 68000 Family Hardware, Software, and Interfacing
+ASIN ‏ : ‎ 0534948227
+Publisher ‏ : ‎ CL-Engineering; 
+Language ‏ : ‎ English
+Hardcover ‏ : ‎ 992 pages
+ISBN-10 ‏ : ‎ 9780534948221
+ISBN-13 ‏ : ‎ 978-0534948221
+
+Title : Modern Computer Architecture and Organization: Learn x86, ARM, and RISC-V architectures and the design of smartphones, PCs, and cloud servers
+Publisher ‏ : ‎ Packt Publishing; 
+Language ‏ : ‎ English
+Year : 2022
+Month : 5
+Paperback ‏ : ‎ 666 pages
+ISBN-10 ‏ : ‎ 1803234512
+ISBN-13 ‏ : ‎ 978-1803234519
+
+Title : C Programming Language
+Publisher ‏ : ‎ Pearsonon
+Year : 1988
+Month : 3
+Paperback ‏ : ‎ 272 pages
+ISBN-10 ‏ : ‎ 0131103628
+ISBN-13 ‏ : ‎ 978-013110362
+
+Title : Introductory Circuit Analysis
+ASIN ‏ : ‎ 0133923606
+Publisher ‏ : ‎ Pearsonn
+Edition : 10
+Language ‏ : ‎ English
+Hardcover ‏ : ‎ 1216 pages 
+ISBN-10 ‏ : ‎ 9780133923605 
+ISBN-13 ‏ : ‎ 978-0133923605 
+Item Weight ‏ : ‎ 5.34 pounds

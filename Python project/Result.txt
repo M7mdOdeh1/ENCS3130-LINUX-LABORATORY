@@ -1,0 +1,21 @@
+--------------------------------------
+Title: C Programming Language
+ Publisher: Pearsonon
+ ISBN10: 0131103628
+ ISBN13: 978-0131103627
+{'Year': '1988', 'Month': '3', 'Paperback': '272 pages'}
+ Count: 2--------------------------------------
+--------------------------------------
+Title: C Programming Language
+ Publisher: Pearsonon
+ ISBN10: 0131103628
+ ISBN13: 978-013110362
+{'Year': '1988', 'Month': '3', 'Paperback': '272 pages'}
+ Count: 1--------------------------------------
+--------------------------------------
+Title: Introductory Circuit Analysis
+ Publisher: Pearsonn
+ ISBN10: 9780133923605
+ ISBN13: 978-0133923605
+{'ASIN': '0133923606', 'Edition': '10', 'Language': 'English', 'Hardcover': '1216 pages', 'Item Weight': '5.34 pounds'}
+ Count: 1--------------------------------------
