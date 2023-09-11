@@ -42,12 +42,15 @@ def load_books(filename):
                 elif tokens[0] == "ISBN13":
                     book.set_isbn13(tokens[1].strip())
                 # if the line is an optional
+                elif tokens[0] == "Count":
+                    book.set_count(int(tokens[1].strip()))
                 else:
                     book.add_optional(tokens[0].strip(), tokens[1].strip())
                 
             # if the line is empty or the last line in the file, it means that the book is finished
             if line == "\n" or i == no_of_lines:
                 books.append(book)
+                print(book)
                 book = Book()
 
     return books
@@ -99,6 +102,8 @@ def add_books(lms):
                 elif tokens[0] == "ISBN-13":
                     book.set_isbn13(tokens[1])
                     isISBN13 = True
+                elif tokens[0] == "Count":
+                    book.set_count(int(tokens[1]))
                 else:
                     # add the optional information to the book
                     book.add_optional(tokens[0], tokens[1])
@@ -165,7 +170,7 @@ def search_book(lms):
     key = input ("Search for a book using any paramerter: ")
     result = []
     for book in books:
-        if key in book.get_title() or key in book.get_publisher() or key in book.get_isbn10() or key in book.get_isbn13() or key in book.get_optionals().values():
+        if key == book.get_title() or key == book.get_publisher() or key == book.get_isbn10() or key == book.get_isbn13() or key in book.get_optionals().values():
             print("--------------------------------------")
             print(book)
             result.append(book)
@@ -201,16 +206,154 @@ When selecting this option, the LMS should prompt the user to provide the file's
 before letting them update the file's details. Before saving the changed data, the LMS should ask the user
 for confirmation.
 """
-def edit_book():
+def edit_book(lms):
     print("Edit book")
-    # ask the user to enter the file name or ISBN number
-    key = input("Enter the file name or ISBN number: ")
     
-    # search for the book
-    # if the book is found, ask the user to enter the new information
-    # ask the user to confirm the changes
-    # if the user confirms, save the changes
-    # if the user does not confirm, do not save the changes
+    # ask the user to enter the title or the ISBNs numbers to the book to be edited
+    print("Enter the title or the ISBNs numbers to the book to be edited: ")
+    print("1. Find the book by title")
+    print("2. Find the book by ISBN-10 and ISBN-13")
+    
+
+    while True:
+        choice = input("Enter your choice: ")
+        if choice == "1":
+            title = input("Enter the title: ")
+            indecies = lms.find_book_title(title)
+
+            # if more than one book found, ask the user to choose one of them
+            if len(indecies) > 1:
+                print("More than one book found!!!")
+                print("Please choose one of the following indecies: ")
+                for i in range(len(indecies)):
+                    print(f"{i+1}. {lms.get_books()[indecies[i]]}")
+                index = int(input("Enter your choice: "))
+                index -= 1
+                
+                # keep asking the user to enter a valid index
+                while index < 0 or index >= len(indecies):
+                    print("Invalid choice. Please try again.")
+                    index = int(input("Enter your choice: "))
+                    index -= 1
+
+            elif len(indecies) == 1:
+                index = 0
+            else:
+                print("No book found!!!")
+                break
+
+            # print the book to be edited
+            print("--------------------------------------")
+            print(lms.get_books()[indecies[index]])
+            print("--------------------------------------")
+
+            # ask the user to enter the new data
+            print("Enter the new data (leave it blank to skip it): ")
+            title = input("Enter the title: ")
+            publisher = input("Enter the publisher: ")
+            isbn10 = input("Enter the ISBN-10: ")
+            isbn13 = input("Enter the ISBN-13: ")
+            count = int(input("Enter the number of copies: "))
+            optionals = {}
+            for key in lms.get_books()[indecies[index]].get_optionals().keys():
+                optionals[key] = input(f"Enter the {key}: ")
+            
+            # check if the user entered any data or leave it blank
+            if title == "":
+                title = lms.get_books()[indecies[index]].get_title()
+            if publisher == "":
+                publisher = lms.get_books()[indecies[index]].get_publisher()
+            if isbn10 == "":
+                isbn10 = lms.get_books()[indecies[index]].get_isbn10()
+            if isbn13 == "":
+                isbn13 = lms.get_books()[indecies[index]].get_isbn13()
+            if count == "":
+                count = lms.get_books()[indecies[index]].get_count()
+            for key in optionals.keys():
+                if optionals[key] == "":
+                    optionals[key] = lms.get_books()[indecies[index]].get_optionals()[key]
+
+            # create the book object
+            book = Book(title, publisher, isbn10, isbn13, optionals, count)
+            print("--------------------------------------")
+            print(book)
+            print("--------------------------------------")
+
+            # ask the user to confirm the changes
+            print("Do you want to save the changes?")
+            print("1. Yes")
+            print("2. No")
+            choice = input("Enter your choice: ")
+
+            while True:
+                if choice == "1":
+                    lms.remove_book(indecies[index])
+                    lms.add_book(book)
+                    print("The book has been Edited!!!")
+                    break
+                elif choice == "2":
+                    print("The book has not been Edited!!!")
+                    break
+                else:
+                    print("Invalid choice. Please try again.")
+                    continue
+
+            break
+        elif choice == "2":
+            isbn10 = input("Enter the ISBN-10: ")
+            isbn13 = input("Enter the ISBN-13: ")
+
+            # search for the book
+            index = lms.find_book_isbn(isbn10, isbn13)
+            if index != -1:
+                # print the book to be edited
+                print("--------------------------------------")
+                print(lms.get_books()[index])
+                print("--------------------------------------")
+
+                # ask the user to enter the new data
+                print("Enter the new data: ")
+                title = input("Enter the title: ")
+                publisher = input("Enter the publisher: ")
+                isbn10 = input("Enter the ISBN-10: ")
+                isbn13 = input("Enter the ISBN-13: ")
+                count = int(input("Enter the number of copies: "))
+                optionals = {}
+                for key in lms.get_books()[index].get_optionals().keys():
+                    optionals[key] = input(f"Enter the {key}: ")
+                book = Book(title, publisher, isbn10, isbn13, optionals, count)
+                print("--------------------------------------")
+                print(book)
+                print("--------------------------------------")
+
+                # ask the user to confirm the changes
+                print("Do you want to save the changes?")
+                print("1. Yes")
+                print("2. No")
+                choice = input("Enter your choice: ")
+
+                while True:
+                    if choice == "1":
+                        lms.remove_book(index)
+                        lms.add_book(book)
+                        print("The book has been Edited!!!")
+                        break
+                    elif choice == "2":
+                        print("The book has not been Edited!!!")
+                        break
+                    else:
+                        print("Invalid choice. Please try again.")
+                        continue
+
+            else:
+                print("No book found!!!")
+                break
+            break
+        else:
+            print("Invalid choice. Please try again.")
+            continue
+
+
 
 
 
@@ -255,12 +398,13 @@ def archive_book(lms):
             if choice == "1":
                 # check if the number of copies is equal to the number of copies in the library
                 if count == lms.get_books()[index].get_count():
-                    lms.add_archive(lms.remove_book(index))
+                    lms.add_archived_book(lms.remove_book(index))
                     print("The book has been archived!!!")
                 else:
-                    # add the book to the archive with the new number of copies
-                    lms.add_archive(lms.get_books()[index])
-                    lms.get_archive()[-1].set_count(count)
+                    # create a copy of the book with the new number of copies
+                    book_copy = Book(lms.get_books()[index].get_title(), lms.get_books()[index].get_publisher(), lms.get_books()[index].get_isbn10(), lms.get_books()[index].get_isbn13(), lms.get_books()[index].get_optionals(), count)
+                    # add the book to the archive
+                    lms.add_archived_book(book_copy)
                     # update the number of copies in the library
                     lms.get_books()[index].set_count(lms.get_books()[index].get_count() - count)
                     
@@ -308,7 +452,7 @@ def remove_book(lms):
     if index != -1:
         # ask the user if he really wants to remove the book
         print("****************************************")
-        print("The book title is: ", lms.get_archive()[index].get_title())
+        print("The book title is: ", lms.get_archived_books()[index].get_title())
         print("Are you sure you want to remove the book?")
         print("1. Yes")
         print("2. No")
@@ -379,7 +523,7 @@ def generate_report(lms):
         
     print("The book distribution by the publisher is:")
     for publisher in publisher_distribution:
-        print(f"{publisher}: {publisher_distribution[publisher]}")
+        print(f"Books From {publisher}: {publisher_distribution[publisher]}")
 
     # print the book distribution by the year
     year_distribution = {}
@@ -393,7 +537,7 @@ def generate_report(lms):
 
     print("The book distribution by the year is:")
     for year in year_distribution:
-        print(f"{year}: {year_distribution[year]}")
+        print(f"Books published in {year}: {year_distribution[year]}")
 
     
 
@@ -444,11 +588,18 @@ def main ():
 
     # check if the books file exists
     if os.path.exists(books_filename):
+        print("================================================")
+        print("Loading the books in the LMS...")
         lms.set_books(load_books(books_filename))
+        print("The books in the LMS have been loaded successfully.")
+        print("================================================")
     
     # check if the archived books file exists
     if os.path.exists(archived_books_filename):
+        print("Loading the archived books...")
         lms.set_archived_books(load_books(archived_books_filename))
+        print("The archived books have been loaded successfully.")
+        print("================================================")
 
 
     while True:
@@ -459,7 +610,7 @@ def main ():
 4. Archiving a book
 5. Remove a book from the LMS
 6. Generate a report about the books available in the LMS
-7. Exit
+7. Save and Exit
 ================================================""")
         
         choice = input("Enter your choice: ")

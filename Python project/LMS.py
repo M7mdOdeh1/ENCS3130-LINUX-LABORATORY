@@ -1,4 +1,3 @@
-from Book import Book
 
 class LMS:
     def __init__(self):
@@ -34,6 +33,14 @@ class LMS:
             if self.archived_books[i].get_isbn10() == isbn10 and self.archived_books[i].get_isbn13() == isbn13:
                 return i
         return -1
+    
+    def find_book_title(self, title):
+        indecies = []
+        for i in range(len(self.books)):
+            if self.books[i].get_title() == title:
+                indecies.append(i)
+        return indecies
+    
 
     def get_books(self):
         return self.books

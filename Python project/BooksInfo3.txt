@@ -1,21 +1,17 @@
-Title : Digital Systems
-Publisher ‏ : ‎ Pearson; 
-Language ‏ : ‎ English
-Hardcover ‏ : ‎ 1004 pages
-ISBN-10 ‏ : ‎ 0134220137
-ISBN-13 ‏ : ‎ 978-0134220130
+ISBN-10 : 0995978402
+ISBN-13 : 978-0995978409
+Title : Linux Basics for Hackers, Getting Started with Networking, Scripting, and Security in Kali
+Publisher : Occupy the Web
+Count : 1
+Year : 2016
+Month : 9
+Paperback: 352 pages
 
-Title : Introductory Circuit Analysis
-ASIN ‏ : ‎ 0133923606
-Publisher ‏ : ‎ Pearson; ;
-Edition : 13
-Language ‏ : ‎ English
-Hardcover ‏ : ‎ 1216 pages
-ISBN-10 ‏ : ‎ 9780133923605
-ISBN-13 ‏ : ‎ 978-0133923605
-
-Title : Electronic Devices and Circuit Theory
-Publisher ‏ : ‎ Pearson Education India; 
-Language ‏ : ‎ English
-ISBN-10 ‏ : ‎ 9332542600
-ISBN-13 ‏ : ‎ 978-9332542600
+ISBN-10 : 1260108414
+ISBN-13 : 978-1260108415
+Title : Gray Hat Hacking, The Ethical Hacker's Handbook
+Publisher : McGraw-Hill Education
+Count : 1
+Year : 2020
+Month : 7
+Paperback : 656 pages

@@ -1,0 +1,8 @@
+--------------------------------------
+Title: Linux System Programming: Talking Directly to the Kernel and C Library
+ Publisher: O'Reilly Media
+ ISBN10: 1449339530
+ ISBN13: 978-1449339531
+{'Edition': '2', 'Year': '2013', 'Month': '1', 'Language': 'English', 'Paperback': '456 pages'}
+ Count: 1
+--------------------------------------

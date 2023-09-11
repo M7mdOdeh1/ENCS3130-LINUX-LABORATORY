@@ -1,20 +1,13 @@
 # Book class
 class Book:
-    def __init__(self, title, publisher, isbn10, isbn13):
+
+    def __init__(self, title="", publisher="", isbn10="", isbn13="", optionals=None, count=1):
         self.title = title
         self.publisher = publisher
-        self.isbnn10 = isbn10
+        self.isbn10 = isbn10
         self.isbn13 = isbn13
-        self.optionals = {}
-        self.count = 1
-
-    def __init__(self):
-        self.title = ""
-        self.publisher = ""
-        self.isbnn10 = ""
-        self.isbn13 = ""
-        self.optionals = {}
-        self.count = 1
+        self.optionals = optionals if optionals is not None else {}
+        self.count = count
 
     def add_count(self):
         self.count += 1
@@ -32,7 +25,7 @@ class Book:
         return self.publisher
     
     def get_isbn10(self):
-        return self.isbnn10
+        return self.isbn10
     
     def get_isbn13(self):
         return self.isbn13
@@ -50,7 +43,7 @@ class Book:
         self.publisher = publisher
 
     def set_isbn10(self, isbn10):
-        self.isbnn10 = isbn10
+        self.isbn10 = isbn10
 
     def set_isbn13(self, isbn13):
         self.isbn13 = isbn13
@@ -62,5 +55,6 @@ class Book:
         self.count = count
 
     def __str__(self):
-        return "Title: "+ self.title + "\n Publisher: " + self.publisher + "\n ISBN10: " + self.isbnn10 + "\n ISBN13: " + self.isbn13 + "\n" + str(self.optionals) + "\n Count: " + str(self.count)
+        return "Title: "+ self.title + "\n Publisher: " + self.publisher + "\n ISBN10: " + self.isbn10 + "\n ISBN13: " + self.isbn13 + "\n" + str(self.optionals) + "\n Count: " + str(self.count) + "\n"
     
+
